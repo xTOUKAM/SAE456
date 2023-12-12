@@ -7,7 +7,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 
     // Comparaison avec les comptes prédéfinis
     if(username.value == "admin" && password.value == "admin") {
-        window.location.href = "index.html";
+        window.location.href = "admin.html";
     } else if(username.value == "entreprise" && password.value == "entreprise") {
         window.location.href = "forms-business.html";
     } else if(username.value == "association" && password.value == "association") {
