@@ -1,3 +1,5 @@
+/* Fonction réalisé par Tom HOULLEGATTE */
+
 /* Récupération des éléments du formulaire */
 var username = document.getElementById("username");
 var password = document.getElementById("password");

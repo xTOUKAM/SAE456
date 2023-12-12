@@ -1,3 +1,5 @@
+/* CSS Réalisé par HOULLEGATTE Tom */
+
 /* Style par défaut */
 * {
     margin: 0;
@@ -125,6 +127,28 @@ li:hover .sous {
 
 .info-special p {
     font-size: 10px;
+}
+
+/* Image de présentation */
+.img-presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+}
+
+.img-presentation-img {
+    width: 60%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+    border-radius: 50px;
 }
 
 /* Footer */
@@ -291,4 +315,127 @@ main {
     border: none;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour la page de presentation */
+.text-box {
+    width: 100%;
+    margin-bottom: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #444;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-box p {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+    text-align: justify;
+}
+
+.image-box img {
+    width: 400px;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-box h3 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text-box p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.text-box ul {
+    list-style: "▹";
+    margin-left: 20px;
+}
+
+/* Style pour le carroussel */
+.container {
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    flex-wrap: nowrap;
+}
+
+.slide {
+    flex: 0 0 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%);
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+.carousel-controls button {
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.carousel-controls button img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: #ccc;
+    border-radius: 100%;
+    border: 3px solid #000;
+}
+
+.carousel-dots {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    right: 50%;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.carousel-dots .dot {
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.carousel-dots .active {
+    border: 10px solid #fff !important;
+}
+.carousel-dots .inactive {
+    border: 10px solid #444;
 }

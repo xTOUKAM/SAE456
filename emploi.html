@@ -34,20 +34,46 @@
     <!-- Fin de la barre de navigation -->
 
     <!-- Contenu principal -->
-
-    
     <div class="info-special">
         <h1 class="info-special-title">Emploi</h1>
     </div>
 
-    <div class="emplois">
-        <h3>Emploi et Insertion</h3><br>
-            <p>L’ensemble des acteur·rice·s locaux·ales, soutenu·e·s par Paris 2024, se sont mobilisé·e·s ces dernières années pour faire des Jeux un levier de mobilisation et d’insertion vers l’emploi. Tous ces acteur·rice·s concourent à l’objectif de Paris 2024 : faire des opportunités temporaires des Jeux un tremplin professionnel durable et contribuer à dynamiser des secteurs en tension locaux·ales qui recrutent.
+    <!-- Image de présentation -->
+    <div class="container">
+        <div class="carousel">
+            <div class="carousel-inner">
 
-                En matière d’emploi, les Jeux sont d’abord une véritable opportunité. Cuisinier·ère·s, architectes, agents de sécurité et d’entretien, ingénieur·e·s, logisticien·ne·s, monteur·euse·s, manutentionnaires… Entre 2018 et 2024, plus de 181 000 personnes travailleront directement à l’organisation des prochains Jeux Olympiques et Paralympiques, le plus grand événement au monde !</p><br>
+                <!-- Première image -->
+                <div class="slide">
+                    <img src="img/fond.jpg" alt="Image de présentation des JO">
+                </div>
+
+                <!-- Deuxième image -->
+                <div class="slide">
+                    <img  src="img/fond2.jpg" alt="Image de présentation des JO">
+                </div>
+
+                <!-- Troisième image -->
+                <div class="slide">
+                    <img  src="img/fond3.jpg" alt="Image de présentation des JO">
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button id="prev"><img src="img/arrow-left.svg" alt="Fleche de gauche"></button>
+                <button id="next"><img src="img/arrow-right.svg" alt="Fleche de droite"></button>
+            </div>
+            <div class="carousel-dots"></div>
+        </div>
     </div>
 
-    <div class="emploi">
+    <div class="text-box">
+        <h3>Emploi et Insertion</h3>
+        <p>L’ensemble des acteur·rice·s locaux·ales, soutenu·e·s par Paris 2024, se sont mobilisé·e·s ces dernières années pour faire des Jeux un levier de mobilisation et d’insertion vers l’emploi. Tous ces acteur·rice·s concourent à l’objectif de Paris 2024 : faire des opportunités temporaires des Jeux un tremplin professionnel durable et contribuer à dynamiser des secteurs en tension locaux·ales qui recrutent.
+        En matière d’emploi, les Jeux sont d’abord une véritable opportunité. Cuisinier·ère·s, architectes, agents de sécurité et d’entretien, ingénieur·e·s, logisticien·ne·s, monteur·euse·s, manutentionnaires… Entre 2018 et 2024, plus de 181 000 personnes travailleront directement à l’organisation des prochains Jeux Olympiques et Paralympiques, le plus grand événement au monde !</p>
+    </div>
+
+    <div class="text-box">
         <h3> L'insertion sur le chantiers des jeux</h3><br>
         <p>Les chantiers des Jeux ont été les premiers témoins de la dynamique positive en terme d’emploi (plus de 30 000 personnes mobilisées dessus) mais surtout l’illustration du travail mené pour l’insertion.
 
@@ -84,5 +110,8 @@
             <p class="p-footer-text">© 2023 Paris x Lisieux 2024 Tous droits réservés | CAILLET Enzo.</p>
         </div>
     </footer>
+
+    <!-- Script -->
+    <script src="js/carousel.js"></script>
 </body>
 </html>

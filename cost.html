@@ -38,29 +38,49 @@
         <h1 class="info-special-title">Les Coûts economiques</h1>
     </div>
 
-    <div class="opportunité">
-        <h3> Jeux olympiques de Paris 2024 : les réserves de la Cour des comptes </h3><br>
-        <p>Les chiffres avancés de 6,9 milliards d'euros en phase de candidature ont été portés à 7 milliards lors de l’établissement des premiers budgets du Comité d'organisation des Jeux olympiques et paralympiques (Cojop) et de la Société de livraison des ouvrages olympiques (Solideo). Ces chiffres pourraient s’élever, après la révision budgétaire de décembre 2022, à 8,8 milliards d'euros.
+    <!-- Image de présentation -->
+    <div class="container">
+        <div class="carousel">
+            <div class="carousel-inner">
 
-            La part du financement public s'établit à près de 2,4 milliards d'euros.</p><br>
+                <!-- Première image -->
+                <div class="slide">
+                    <img src="img/fond.jpg" alt="Image de présentation des JO">
+                </div>
+
+                <!-- Deuxième image -->
+                <div class="slide">
+                    <img  src="img/fond2.jpg" alt="Image de présentation des JO">
+                </div>
+
+                <!-- Troisième image -->
+                <div class="slide">
+                    <img  src="img/fond3.jpg" alt="Image de présentation des JO">
+                </div>
             </div>
-   <!--<div class="image">
-        <img src="https://img.lemde.fr/2022/10/18/0/0/2100/2796/700/0/75/0/2e4082f_1666107481532-budgets-depenses-700.png" alt="les retombées econmique des JO de Paris 2024">
-    </div>-->
+
+            <div class="carousel-controls">
+                <button id="prev"><img src="img/arrow-left.svg" alt="Fleche de gauche"></button>
+                <button id="next"><img src="img/arrow-right.svg" alt="Fleche de droite"></button>
+            </div>
+            <div class="carousel-dots"></div>
+        </div>
+    </div>
+
+    <div class="text-box">
+        <h3> Jeux olympiques de Paris 2024 : les réserves de la Cour des comptes </h3>
+        <div class="image-box">
+            <p>Les chiffres avancés de 6,9 milliards d'euros en phase de candidature ont été portés à 7 milliards lors de l’établissement des premiers budgets du Comité d'organisation des Jeux olympiques et paralympiques (Cojop) et de la Société de livraison des ouvrages olympiques (Solideo). Ces chiffres pourraient s’élever, après la révision budgétaire de décembre 2022, à 8,8 milliards d'euros.
+                La part du financement public s'établit à près de 2,4 milliards d'euros.</p>
+            <img src="https://img.lemde.fr/2022/10/18/0/0/2100/2796/700/0/75/0/2e4082f_1666107481532-budgets-depenses-700.png" alt="les retombées econmique des JO de Paris 2024">
+        </div>
+    </div>
 
 
-    <div class="opportunité">
-        <h3> Les transport, un enjeu crucial pour les JO </h3><br>
+    <div class="text-box">
+        <h3> Les transport, un enjeu crucial pour les JO </h3>
         <p>IDFM a donc choisi ce « passe Paris 2024 », dont les tarifs seront votés le 7 décembre, pour financer en partie les 225 millions d'euros que coûteront les transports en commun lors des JO.Valerie Précresse à affirmer sur la tarification spéciale mise en place pour les JO, elle a redit qu'il s'agissait du "juste prix" et qu'elle "refusait que les Franciliens paient le coût des JO".</p>
-</div>
-
-
-   
-
-
-
-
-
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -89,5 +109,7 @@
         </div>
     </footer>
 
+    <!-- Script -->
+    <script src="js/carousel.js"></script>
 </body>
 </html>
