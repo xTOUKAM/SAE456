@@ -15,7 +15,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     } else if(username.value == "mairie" && password.value == "mairie") {
         window.location.href = "forms-city.html";
     } else if(username.value == "habitant" && password.value == "habitant") {
-        window.location.href = "index.html";
+        window.location.href = "forms-people.html";
     } else {
         alert("Identifiant ou mot de passe incorrect");
     }
