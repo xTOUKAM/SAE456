@@ -157,3 +157,55 @@ body {
     display: inline-block;
     margin-top: 10px;
 }
+
+/* Style pour le système de connexion */
+.form-box {
+    width: 100%;
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 50px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-box label {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-btn {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #444;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.form-btn:hover {
+    background-color: #666;
+}
+
