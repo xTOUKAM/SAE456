@@ -13,7 +13,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     } else if(username.value == "association" && password.value == "association") {
         window.location.href = "forms-organization.html";
     } else if(username.value == "mairie" && password.value == "mairie") {
-        window.location.href = "index.html";
+        window.location.href = "forms-city.html";
     } else if(username.value == "habitant" && password.value == "habitant") {
         window.location.href = "index.html";
     } else {
