@@ -14,8 +14,10 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-}
+    padding: 0;
+    overflow-x: hidden;
+    font-family: sans-serif;
+  }
 
 /* Style header */
 .main-header {
@@ -69,7 +71,7 @@ body {
 
 .sous {
     display: none;
-    box-shadow: 0px 1px 2px #444;
+    box-shadow: 0px 1px 2px #FFB114;
     background-color: #fff;
     position: absolute;
     width: 200px;
@@ -89,7 +91,7 @@ body {
 li:hover .sous {
     display: block;
     position: absolute;
-    background-color: #444;
+    background-color: #FAB41E;
     transition: all 0.3s ease-in-out;
 }
 
@@ -99,6 +101,114 @@ li:hover .sous {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 10px;
+}
+
+#burger-menu {
+    display: none;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+    overflow: visible;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: #000;
+    z-index: 2;
+  
+    span,
+    span:before,
+    span:after {
+      background: #444;
+      display: block;
+      height: 2px;
+      opacity: 1;
+      position: absolute;
+      transition: 0.3s ease-in-out;
+    }
+  
+    span:before,
+    span:after {
+      content: "";
+    }
+  
+    span:before {
+      left: 0px;
+      top: -10px;
+      width: 27px;
+    }
+  
+    span {
+      right: 0px;
+      top: 13px;
+      width: 27px;
+    }
+  
+    span:after {
+      left: 0px;
+      top: 10px;
+      width: 27px;
+    }
+  
+    &.close {
+      span:before {
+        top: 0px;
+        transform: rotate(90deg);
+        width: 27px;
+      }
+  
+      span {
+        transform: rotate(-45deg);
+        top: 13px;
+        width: 27px;
+      }
+
+      span:after {
+        top: 0px;
+        left: 0;
+        transform: rotate(90deg);
+        opacity: 0;
+        width: 0;
+      }
+    }
+  }
+  
+  #menu {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+  
+    &.overlay {
+      visibility: visible;
+      opacity: 1;
+      padding-top: 100px;
+      background: rgba(0, 0, 0, 0.8);
+    }
+  
+    ul {
+      padding: 0;
+    }
+  
+    li {
+      list-style: none;
+    }
+  
+    a {
+      color: #fff;
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
 }
 
 .deroulant > a::after {
@@ -112,7 +222,7 @@ li:hover .sous {
     justify-content: center;
     align-items: center;
     padding: 20px 0px;
-    background-color: #444; 
+    background-color: #FFB114; 
     color: #fff;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
 }
@@ -155,7 +265,7 @@ li:hover .sous {
 .footer {
     position: sticky;
     width: 100%;
-    background-color: #444;
+    background-color: #FFB114;
     color: #fff;
     padding: 40px 0px;
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
@@ -261,7 +371,7 @@ li:hover .sous {
     border: none;
     border-radius: 5px;
     outline: none;
-    background-color: #444;
+    background-color: #FFB114;
     color: #fff;
     font-weight: bold;
     cursor: pointer;
@@ -298,7 +408,7 @@ main {
     padding: 20px;
     box-sizing: border-box;
     background-color: #fff;
-    color: #444;
+    color: #FFB114;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -319,8 +429,11 @@ main {
 
 /* Style pour la page de presentation */
 .text-box {
-    width: 100%;
-    margin-bottom: 100px;
+    flex: 1 1 40%;
+    width: auto;
+    border-radius: 50px;
+    margin-bottom: 50px;
+    margin-top: 50px;
     padding: 20px;
     box-sizing: border-box;
     background-color: #fff;
@@ -363,6 +476,10 @@ main {
 /* Style pour le carroussel */
 .container {
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .carousel {
@@ -437,5 +554,47 @@ main {
     border: 10px solid #fff !important;
 }
 .carousel-dots .inactive {
-    border: 10px solid #444;
+    border: 10px solid #FFB114;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+
+    .main-nav {
+        display: none;
+    }
+
+    #burger-menu {
+      display: block;
+    }
+  
+    #menu {
+       display: block;
+    }
+
+    .footer-column {
+        display: none;
+    }
+
+    .footer-list {
+        display: none;
+    }
+
+    .container {
+        justify-content: none;
+        align-items: none;
+        flex-wrap: nowrap;
+    }
+
+    .container {
+        display: block;
+        text-align: center;
+    }
+
+    .text-box {
+        flex: none;
+        width: 100%;
+        margin-right: 0;
+    }
 }
