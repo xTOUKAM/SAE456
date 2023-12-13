@@ -14,8 +14,10 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-}
+    padding: 0;
+    overflow-x: hidden;
+    font-family: sans-serif;
+  }
 
 /* Style header */
 .main-header {
@@ -99,6 +101,114 @@ li:hover .sous {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 10px;
+}
+
+#burger-menu {
+    display: none;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+    overflow: visible;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: #000;
+    z-index: 2;
+  
+    span,
+    span:before,
+    span:after {
+      background: #444;
+      display: block;
+      height: 2px;
+      opacity: 1;
+      position: absolute;
+      transition: 0.3s ease-in-out;
+    }
+  
+    span:before,
+    span:after {
+      content: "";
+    }
+  
+    span:before {
+      left: 0px;
+      top: -10px;
+      width: 27px;
+    }
+  
+    span {
+      right: 0px;
+      top: 13px;
+      width: 27px;
+    }
+  
+    span:after {
+      left: 0px;
+      top: 10px;
+      width: 27px;
+    }
+  
+    &.close {
+      span:before {
+        top: 0px;
+        transform: rotate(90deg);
+        width: 27px;
+      }
+  
+      span {
+        transform: rotate(-45deg);
+        top: 13px;
+        width: 27px;
+      }
+
+      span:after {
+        top: 0px;
+        left: 0;
+        transform: rotate(90deg);
+        opacity: 0;
+        width: 0;
+      }
+    }
+  }
+  
+  #menu {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+  
+    &.overlay {
+      visibility: visible;
+      opacity: 1;
+      padding-top: 100px;
+      background: rgba(0, 0, 0, 0.8);
+    }
+  
+    ul {
+      padding: 0;
+    }
+  
+    li {
+      list-style: none;
+    }
+  
+    a {
+      color: #fff;
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
 }
 
 .deroulant > a::after {
@@ -445,4 +555,46 @@ main {
 }
 .carousel-dots .inactive {
     border: 10px solid #FFB114;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+
+    .main-nav {
+        display: none;
+    }
+
+    #burger-menu {
+      display: block;
+    }
+  
+    #menu {
+       display: block;
+    }
+
+    .footer-column {
+        display: none;
+    }
+
+    .footer-list {
+        display: none;
+    }
+
+    .container {
+        justify-content: none;
+        align-items: none;
+        flex-wrap: nowrap;
+    }
+
+    .container {
+        display: block;
+        text-align: center;
+    }
+
+    .text-box {
+        flex: none;
+        width: 100%;
+        margin-right: 0;
+    }
 }
